@@ -13,6 +13,5 @@ module shelf_at(height = 0) {
 small_shelf_height = 18;
 num_small_shelves = 3;
 for (i = [1 : num_small_shelves]) {
-  echo(i);
   shelf_at(small_shelf_height * i);
 }

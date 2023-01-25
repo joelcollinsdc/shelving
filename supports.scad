@@ -11,9 +11,9 @@ module flattwobyfour() {
 
 numtwobyfours = 4;
 gaps = numtwobyfours - 1;
-gapbetween = (width - (numtwobyfours * 3.5)) / (gaps);
+gapbetween = (width - (numtwobyfours * FOUR_BY)) / (gaps);
 
-function twobyfourstartpos(num = 0) = gapbetween * num + (TWO_BY * num);
+function twobyfourstartpos(num = 0) = (gapbetween * num) + (FOUR_BY * num);
 
 twobyfour();
 
@@ -27,8 +27,8 @@ twobyfour();
 translate([twobyfourstartpos(3),0,0])
 twobyfour();
 
-translate([0, -1 * depth, 0])
+translate([0, -1 * depth + FOUR_BY, 0])
 flattwobyfour();
 
-translate([width - 1.5, -1 * depth, 0])
+translate([width - 1.5, -1 * depth + FOUR_BY, 0])
 flattwobyfour();
